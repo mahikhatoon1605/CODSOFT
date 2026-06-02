@@ -1,42 +1,34 @@
-# CODSOFT
-# CODSOFT Python Internship - Task 2
+# Simple Calculator
 
-## Simple Calculator
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
 
-This project was developed as part of the CodSoft Python Programming Internship.
+print("\nChoose Operation:")
+print("1. Addition (+)")
+print("2. Subtraction (-)")
+print("3. Multiplication (*)")
+print("4. Division (/)")
 
-## Task Description
+choice = input("Enter your choice (1/2/3/4): ")
 
-Design a simple calculator with basic arithmetic operations.
+if choice == "1":
+    result = num1 + num2
+    print("Result =", result)
 
-The program:
-- Takes two numbers as input
-- Allows the user to choose an operation
-- Performs the calculation
-- Displays the result
+elif choice == "2":
+    result = num1 - num2
+    print("Result =", result)
 
-## Features
+elif choice == "3":
+    result = num1 * num2
+    print("Result =", result)
 
-- Addition
-- Subtraction
-- Multiplication
-- Division
-- Division by zero handling
+elif choice == "4":
+    if num2 != 0:
+        result = num1 / num2
+        print("Result =", result)
+    else:
+        print("Error: Division by zero is not allowed.")
 
-## Technologies Used
-
-- Python 3
-
-## How to Run
-
-```bash
-python calculator.py
-```
-
-## Author
-
-Mahi Khatoon
-
-## Internship
-
-Completed under the Python Programming Internship offered by CodSoft.
+else:
+    print("Invalid Choice!")
